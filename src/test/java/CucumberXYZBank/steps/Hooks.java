@@ -1,0 +1,34 @@
+package CucumberXYZBank.steps;
+
+import CucumberXYZBank.context.TestContext;
+import CucumberXYZBank.utils.ConfigurationReader;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+import static CucumberXYZBank.context.TestContext.*;
+
+public class Hooks {
+
+    @Before
+    public void beforeMethod(Scenario scenario) {
+        getDriver().get(ConfigurationReader.get("base_url"));
+        TestContext.scenario = scenario;
+    }
+
+    @After
+    public void afterMethod(Scenario scenario) {
+        if (scenario.isFailed()) {
+            WebDriver driver = getDriver();
+            if (driver != null) {
+                TakesScreenshot ts = (TakesScreenshot) driver;
+                byte[] src = ts.getScreenshotAs(OutputType.BYTES);
+                scenario.attach(src, "image/png", "Скриншот ошибки");
+            }
+        }
+        closeDriver();
+    }
+}
