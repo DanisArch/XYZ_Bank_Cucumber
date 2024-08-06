@@ -1,4 +1,4 @@
-package CucumberXYZBank.utils;
+package utils;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;

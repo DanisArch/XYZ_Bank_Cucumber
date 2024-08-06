@@ -1,7 +1,7 @@
-package CucumberXYZBank.stepdefinitions;
+package stepdefinitions;
 
-import CucumberXYZBank.context.TestContext;
-import CucumberXYZBank.utils.ConfigurationReader;
+import context.TestContext;
+import utils.ConfigurationReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import static CucumberXYZBank.context.TestContext.*;
+import static context.TestContext.*;
 
 public class Hooks {
 

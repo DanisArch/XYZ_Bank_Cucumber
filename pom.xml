@@ -140,7 +140,7 @@
                 <configuration>
                     <rerunFailingTestsCount>2</rerunFailingTestsCount>
                     <includes>
-                        <include>**/RunCucumberTest.java</include>
+                        <include>**/TestRunner.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                     <properties>

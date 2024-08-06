@@ -1,14 +1,16 @@
-package CucumberXYZBank.stepdefinitions;
+package stepdefinitions;
 
 
-import CucumberXYZBank.pages.CustomerPage;
-import CucumberXYZBank.pages.LoginPage;
-import CucumberXYZBank.pages.ManagerPage;
+import context.TestContext;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.CustomerPage;
+import pages.LoginPage;
+import pages.ManagerPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 
-import static CucumberXYZBank.context.TestContext.driver;
+import static context.TestContext.driver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginSteps {
@@ -16,6 +18,7 @@ public class LoginSteps {
     LoginPage loginPage = new LoginPage();
     CustomerPage customerPage = new CustomerPage();
     ManagerPage managerPage = new ManagerPage();
+    public TestContext Testcontext;
 
     /*
     @Step("Найти логотип банка на главной странице")
@@ -43,7 +46,7 @@ public class LoginSteps {
     }
 */
     @When("the user clicks on the {string} button")
-    public void theUserClicksOnTheButton(String buttonName) {
+    public void theUserClicksOnTheButton(String buttonName) throws InterruptedException {
         WebElement button = null;
         if (buttonName.equals("Customer Login")) {
             button =loginPage.customerLoginButton;
@@ -52,6 +55,7 @@ public class LoginSteps {
         }
         if (button != null) {
             button.click();
+            Thread.sleep(3000);
         }
     }
 
@@ -63,7 +67,7 @@ public class LoginSteps {
         } else if (pageName.equals("Bank Manager Login")) {
             expectedUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager";
         }
-        String actualUrl = driver.getCurrentUrl();
+        String actualUrl = Testcontext.driver.getCurrentUrl();
         assertEquals(expectedUrl, actualUrl);
     }
 

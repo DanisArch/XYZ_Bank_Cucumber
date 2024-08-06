@@ -1,4 +1,4 @@
-package CucumberXYZBank.utils;
+package utils;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -13,7 +13,7 @@ public class ConfigurationReader {
 
     static {
         try {
-            String patch = "src/test/java/resources/configuration.properties";
+            String patch = "src/test/resources/configuration.properties";
             FileInputStream inputStream = new FileInputStream(patch);
 
             properties = new Properties();

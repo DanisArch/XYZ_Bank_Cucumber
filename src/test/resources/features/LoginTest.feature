@@ -12,7 +12,3 @@ Feature: Select login right in XYZ Bank
     When the user clicks on the "Bank Manager Login" button
     Then the user should be redirected to the "Bank Manager Login" page
 
-
-
-
-#Feature: Checking for two roles to log into a site

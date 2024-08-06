@@ -1,7 +1,7 @@
-package CucumberXYZBank.context;
+package context;
 
-import CucumberXYZBank.utils.ConfigurationReader;
-import CucumberXYZBank.utils.DriverFactory;
+import utils.ConfigurationReader;
+import utils.DriverFactory;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;

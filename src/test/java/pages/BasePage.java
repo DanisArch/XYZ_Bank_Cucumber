@@ -1,6 +1,6 @@
-package CucumberXYZBank.pages;
+package pages;
 
-import CucumberXYZBank.context.TestContext;
+import context.TestContext;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {

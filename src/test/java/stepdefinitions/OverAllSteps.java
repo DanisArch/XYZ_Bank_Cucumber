@@ -1,9 +1,9 @@
-package CucumberXYZBank.stepdefinitions;
+package stepdefinitions;
 
-import CucumberXYZBank.pages.LoginPage;
+import pages.LoginPage;
 import io.cucumber.java.en.Given;
 
-import static CucumberXYZBank.context.TestContext.*;
+import static context.TestContext.*;
 
 public class OverAllSteps {
     LoginPage loginPage = new LoginPage();
