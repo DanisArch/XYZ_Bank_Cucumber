@@ -1,16 +1,11 @@
 package CucumberXYZBank.pages;
 
-import CucumberXYZBank.context.TestContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
 public class CustomerPage extends BasePage {
-
-    public CustomerPage(TestContext context) {
-        super(context);
-    }
 
     @FindBy(css = "#userSelect")
     public WebElement userSelect;

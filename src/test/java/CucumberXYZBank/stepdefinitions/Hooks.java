@@ -1,4 +1,4 @@
-package CucumberXYZBank.steps;
+package CucumberXYZBank.stepdefinitions;
 
 import CucumberXYZBank.context.TestContext;
 import CucumberXYZBank.utils.ConfigurationReader;

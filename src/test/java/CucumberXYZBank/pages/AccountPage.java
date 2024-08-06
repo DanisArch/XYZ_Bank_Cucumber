@@ -1,14 +1,9 @@
 package CucumberXYZBank.pages;
 
-import CucumberXYZBank.context.TestContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AccountPage extends BasePage {
-
-    public AccountPage(TestContext context) {
-        super(context);
-    }
 
     @FindBy(css = "strong > span[class='fontBig ng-binding']")
     public WebElement welcomeUserName;
