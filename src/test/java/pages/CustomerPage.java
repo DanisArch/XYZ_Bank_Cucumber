@@ -14,5 +14,5 @@ public class CustomerPage extends BasePage {
     public List<WebElement> listCustomerNames;
 
     @FindBy(css = "button[type='submit']")
-    public static WebElement loginButton;
+    public WebElement loginButton;
 }

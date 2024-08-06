@@ -2,7 +2,6 @@ package stepdefinitions;
 
 
 import context.TestContext;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.CustomerPage;
 import pages.LoginPage;
 import pages.ManagerPage;
@@ -16,9 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LoginSteps {
 
     LoginPage loginPage = new LoginPage();
-    CustomerPage customerPage = new CustomerPage();
-    ManagerPage managerPage = new ManagerPage();
-    public TestContext Testcontext;
 
     /*
     @Step("Найти логотип банка на главной странице")
