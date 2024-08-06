@@ -23,7 +23,7 @@
 
         <cucumber-version>7.16.0</cucumber-version>
 
-        <junit-jupiter-api-version>5.8.2</junit-jupiter-api-version>
+        <!--        <junit-jupiter-api-version>5.8.2</junit-jupiter-api-version>    -->
         <junit-jupiter-engine-version>5.10.3</junit-jupiter-engine-version>
         <junit-platform-suite-version>1.11.0-M2</junit-platform-suite-version>
 
@@ -36,12 +36,13 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit-jupiter-api-version}</version>
-            <scope>test</scope>
-        </dependency>
+        <!--
+                <dependency>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter-api</artifactId>
+                    <version>${junit-jupiter-api-version}</version>
+                    <scope>test</scope>
+                </dependency>    -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -95,11 +96,12 @@
             <version>${selenium-driver-version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.21.0</version>
-        </dependency>
+        </dependency>  <!---->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>

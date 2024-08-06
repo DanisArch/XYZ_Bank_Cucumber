@@ -55,6 +55,7 @@ public class LoginSteps {
         }
         if (button != null) {
             button.click();
+
             Thread.sleep(3000);
         }
     }
@@ -67,7 +68,7 @@ public class LoginSteps {
         } else if (pageName.equals("Bank Manager Login")) {
             expectedUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager";
         }
-        String actualUrl = Testcontext.driver.getCurrentUrl();
+        String actualUrl = driver.getCurrentUrl();
         assertEquals(expectedUrl, actualUrl);
     }
 
