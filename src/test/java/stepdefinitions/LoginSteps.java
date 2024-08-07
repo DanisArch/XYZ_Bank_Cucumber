@@ -13,7 +13,7 @@ public class LoginSteps {
     LoginPage loginPage = new LoginPage();
 
     @When("the user clicks on the {string} button")
-    public void theUserClicksOnTheButton(String buttonName) {
+    public void theUserClicksOnTheButton(String buttonName) throws InterruptedException {
         WebElement button = null;
         if (buttonName.equals("Customer Login")) {
             button =loginPage.customerLoginButton;
@@ -23,6 +23,7 @@ public class LoginSteps {
         if (button != null) {
             button.click();
         }
+//        Thread.sleep(3000);
     }
 
     @Then("the user should be redirected to the {string} page")

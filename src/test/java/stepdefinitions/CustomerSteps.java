@@ -19,13 +19,14 @@ public class CustomerSteps {
     @And("the user selects {string} from the user dropdown")
     public void theUserSelectsFromTheUserDropdown(String userName) {
         customerPage.userSelect.click();
-        Select userSelect = new Select(customerPage.userSelect); //By.id("userSelect"))
+        Select userSelect = new Select(customerPage.userSelect);
         userSelect.selectByVisibleText(userName);
     }
 
     @And("the user clicks on the Login button")
-    public void theUserClicksOnTheLoginButton() {
+    public void theUserClicksOnTheLoginButton() throws InterruptedException {
         customerPage.loginButton.click();
+//        Thread.sleep(2000);
     }
 
     @Then("the user should be redirected to the Account page")
