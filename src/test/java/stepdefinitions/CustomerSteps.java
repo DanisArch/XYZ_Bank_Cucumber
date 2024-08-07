@@ -26,7 +26,7 @@ public class CustomerSteps {
     @And("the user clicks on the Login button")
     public void theUserClicksOnTheLoginButton() throws InterruptedException {
         customerPage.loginButton.click();
-//        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     @Then("the user should be redirected to the Account page")

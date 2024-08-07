@@ -23,7 +23,7 @@ public class LoginSteps {
         if (button != null) {
             button.click();
         }
-//        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @Then("the user should be redirected to the {string} page")
