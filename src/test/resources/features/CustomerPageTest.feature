@@ -17,3 +17,4 @@ Feature: Customer login
       | Hermoine Granger |
       | Ron Weasly       |
       | Albus Dumbledore |
+
