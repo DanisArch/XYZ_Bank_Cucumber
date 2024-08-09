@@ -4,6 +4,7 @@ import pages.LoginPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
+import utils.ConfigurationReader;
 
 import static context.TestContext.driver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ public class LoginSteps {
     public void theUserShouldBeRedirectedToThePage(String pageName) {
         String expectedUrl = "";
         if (pageName.equals("Customer Login")) {
-            expectedUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/customer";
+            expectedUrl = ConfigurationReader.get("customer_url");
         } else if (pageName.equals("Bank Manager Login")) {
-            expectedUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager";
+            expectedUrl = ConfigurationReader.get("manager_url");
         }
         String actualUrl = driver.getCurrentUrl();
         assertEquals(expectedUrl, actualUrl);

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.CustomerPage;
+import utils.ConfigurationReader;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class CustomerSteps {
 
     @Then("the user should be redirected to the Account page")
     public void theUserShouldBeRedirectedToTheAccountPage() {
-        String expectedUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/account";
+        String expectedUrl = ConfigurationReader.get("account_url");
         String actualUrl = driver.getCurrentUrl();
         assertEquals(expectedUrl, actualUrl);
     }

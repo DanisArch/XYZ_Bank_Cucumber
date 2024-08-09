@@ -13,4 +13,7 @@ public class ManagerPage extends BasePage {
 
     @FindBy(css = "button[ng-click='showCust()']")
     public WebElement showAllCustomersButton;
+
+    @FindBy(css = "button[ng-click='home()']")
+    public WebElement homeButton;
 }

@@ -41,6 +41,9 @@ public class AccountPage extends BasePage {
     @FindBy(css = "button[class='btn btn-default']")
     public WebElement withdrawMoneyButton;
 
+    @FindBy(css = "span[class='error ng-binding']")
+    public WebElement systemInformation;
+
     @FindBy(css = "button[ng-click='byebye()']")
     public WebElement logoutButton;
 }
