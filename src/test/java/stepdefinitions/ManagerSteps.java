@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import context.ScenarioContext;
 import context.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -92,7 +93,10 @@ public class ManagerSteps {
         String alertMessage = driver.switchTo().alert().getText();
         assertTrue(alertMessage.contains(expectedMessage), "Alert message does not contain expected text.");
         driver.switchTo().alert().accept();
-      //  return String.lastIndexOf(alertMessage);  Вернуть цифры немера
+        // Извлекаю номер счета из сообщения
+        String accountNumber = alertMessage.replaceAll("[^0-9]", ""); // Убираю все, кроме цифр
+        // Сохраняю номер счета для дальнейшего использования
+        ScenarioContext.setContext("AccountNumber", accountNumber);
     }
 
     @When("the user logs out and returns to the login page")
@@ -100,11 +104,14 @@ public class ManagerSteps {
         managerPage.homeButton.click();
     }
 
-    @Then("the account dropdown should contain an account in {string}")
+    @Then("the account dropdown should contain an account in Pound")
     public void theAccountDropdownShouldContainAnAccountIn(String currency) {
         Select accountSelect = new Select(accountPage.listAccountNummerCustomer);
         List<WebElement> options = accountSelect.getOptions();
-        boolean accountFound = options.stream().anyMatch(option -> option.getText().contains(currency));
-        assertTrue(accountFound, "Account in " + currency + " not found in the dropdown.");
+        // Получаю ранее сохраненный номер счета
+        String expectedAccountNumber = (String) ScenarioContext.getContext("AccountNumber");
+        System.out.println(expectedAccountNumber);
+        boolean accountFound = options.stream().anyMatch(option -> option.getText().contains(expectedAccountNumber));
+        assertTrue(accountFound, "Account with number " + expectedAccountNumber + " not found in the dropdown.");
     }
 }

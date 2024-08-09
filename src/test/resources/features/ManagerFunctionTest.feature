@@ -33,4 +33,4 @@ Feature: Bank Manager page
     And the user clicks on the "Customer Login" button
     And the user selects "Albus Dumbledore" from the user dropdown
     And the user clicks on the Login button
-    Then the account dropdown should contain an account in "Pound"
+    Then the account dropdown should contain an account in Pound
