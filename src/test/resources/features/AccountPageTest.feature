@@ -24,7 +24,7 @@ Feature: Account page options
     Then the user should be redirected to the Account page
     When user clicks on the "Deposit" button
     Then user should be redirected to the "Deposit" page
-    When the user enters the "amount" to be deposited
+    When the user enters the "4000" to be deposited
     And the user clicks on the Deposit button
     And user clicks on the "Withdrawl" button
     Then user should be redirected to the "Withdrawl" page

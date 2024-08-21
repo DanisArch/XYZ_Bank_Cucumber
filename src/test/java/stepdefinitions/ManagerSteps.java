@@ -105,7 +105,7 @@ public class ManagerSteps {
     }
 
     @Then("the account dropdown should contain an account in Pound")
-    public void theAccountDropdownShouldContainAnAccountIn(String currency) {
+    public void theAccountDropdownShouldContainAnAccountIn() {
         Select accountSelect = new Select(accountPage.listAccountNummerCustomer);
         List<WebElement> options = accountSelect.getOptions();
         // Получаю ранее сохраненный номер счета

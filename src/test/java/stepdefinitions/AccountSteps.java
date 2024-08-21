@@ -46,7 +46,7 @@ public class AccountSteps {
 
     @When("the user enters the {string} to be deposited")
     public void makeDeposit(String amount) {
-        amount = "4000";
+ //       amount = "4000";
         accountPage.amountToBeDeposited.sendKeys(amount);
     }
 

@@ -21,7 +21,7 @@ public class DriverFactory {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-search-engine-choice-screen");
                 if (ConfigurationReader.get("headless").toLowerCase().contains("true")) {
-                    options.addArguments("--no-default-browser-check");
+ /*                   options.addArguments("--no-default-browser-check");
                     options.addArguments("--no-first-run");
                     options.addArguments("--disable-infobars");
                     options.addArguments("--disable-extensions");
@@ -31,7 +31,7 @@ public class DriverFactory {
                     options.addArguments("--headless");
                     options.addArguments("--no-sandbox");
                     options.addArguments("--disable-infobars");
-                    options.addArguments("--disable-notifications");
+                    options.addArguments("--disable-notifications");*/
                     options.addArguments("--lang=en-en");
                 }
                 driver = new ChromeDriver(options);
