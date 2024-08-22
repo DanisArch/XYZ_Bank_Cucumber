@@ -1,7 +1,7 @@
 Feature: Account page options
 
   @positive
-  Scenario: Customer account replenishment test
+  Scenario Outline: Customer account replenishment test
     Given the user is on the login page
     When the user clicks on the "Customer Login" button
     Then the user should be redirected to the "Customer Login" page
@@ -10,9 +10,13 @@ Feature: Account page options
     Then the user should be redirected to the Account page
     When user clicks on the "Deposit" button
     Then user should be redirected to the "Deposit" page
-    When the user enters the "amount" to be deposited
+    When the user enters the '<amount>' to be deposited
     And the user clicks on the Deposit button
     Then system deposit confirmation
+    Examples:
+      | amount |
+      | 4000   |
+
 
   @positive
   Scenario: Withdrawl of funds from the account of the user Harry Potter
